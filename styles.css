@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* outline: 1px solid #f00 ; */
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+  *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Ubuntu', sans-serif;
+
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.4s ease;
+  height: 5rem; /* Note down this value */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  z-index: 99;
+}
+
+nav.sticky{
+  background: #4070f4;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+nav .nav-content{
+  height: 100%;
+  width: 100%;
+  max-width: 1266px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 100%;
+  display: flex;
+}
+
+.logo img {
+  object-fit: cover;
+  height: 100%;
+  width: 5rem;
+}
+
+nav.sticky .logo a{
+  color: #fff;
+}
+
+.nav-content {
+  padding: 0 1.5rem;
+}
+
+.nav-content .nav-links{
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.nav-content .nav-links li{
+  list-style: none;
+  margin: 0 8px;
+}
+ .nav-links li a{
+  text-decoration: none;
+  color: #0E2431;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 4px;
+  transition: all 0.3s ease;
+}
+ .nav-links li a:hover{
+   color: #4070f4;
+ }
+ nav.sticky .nav-links li a{
+   color: #fff;
+   transition: all 0.4s ease;
+}
+ nav.sticky .nav-links li a:hover{
+  color: #0E2431;
+}
+
+
+.home{
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Ubuntu', sans-serif;
+}
+.home1{
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Ubuntu', sans-serif;
+  }
+h2{
+  font-size: 30px;
+  margin-bottom: 6px;
+  color: hsl(0, 0%, 100%);
+}
+.yuhu{
+  font-size: 25px;
+  margin-bottom: 6px;
+  color: #4070f4;
+  text-align: right;
+}
+.text{
+  text-align: justify;
+  padding: 40px 80px;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+}
+.game-container {
+  /* Properti CSS untuk div game-container tetap seperti sebelumnya */
+  margin-top: 30px; /* Atur jarak antara navbar dan game-container */
+  padding: 20px;
+  border-radius: 3px;
+}
+
+/* Menambahkan kotak kecil berwarna pada setiap <p> */
+.game-container p {
+  /* Properti CSS untuk setiap paragraf di dalam div game-container */
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.game-container p::before {
+  /* Properti CSS untuk kotak kecil pada setiap paragraf */
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 1%;
+  background-color: #f00; /* Ganti dengan warna kotak yang Anda inginkan, misalnya #f00 untuk merah */
+}
+
+h1 {
+  color: coral;
+}
+.grid-container {
+  columns: 5 200px;
+  column-gap: 1.5rem;
+  width: 90%;
+  margin: 0 auto;
+  
+  div {
+    width: 150px;
+    margin: 0 1.5rem 1.5rem 0;
+    display: inline-block;
+    width: 100%;
+    border: solid 2px black;
+    padding: 5px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    transition: all .25s ease-in-out;
+    &:hover img {
+      filter: grayscale(0);
+    }
+    &:hover {
+      border-color: coral;
+    }
+    img {
+      width: 100%;
+      filter: grayscale(100%);
+      border-radius: 5px;
+      transition: all .25s ease-in-out;
+    }
+    p {
+      margin: 5px 0;
+      padding: 0;
+      text-align: center;
+      font-style: italic;
+    }
+  }
+}
+
+
+/* menu bar android */
+
+.menu-bar {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-bar div {
+  width: 25px;
+  height: 3px;
+  background-color: #000000;
+  margin: 3px 0;
+}
+.menu-bar div::bevor {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 3px 0;
+}
+@media screen and (max-width: 600px) {
+  .nav-content .nav-links {
+    display: none;
+  }
+
+  .nav-content .nav-links.active {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 4rem;
+    right: 0;
+    background-color: #4070f4;
+    height: fit-content;
+  }
+
+  .menu-bar {
+    display: flex;
+    justify-content: center;
+}
+
+}
